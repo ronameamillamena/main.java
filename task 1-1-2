@@ -1,0 +1,19 @@
+public class ArithmeticTask {
+    public static void main(String[] args) {
+        int result = 1 + 2; // result is now 3
+        System.out.println("Result after addition: " + result);
+
+        result -= 1; // result is now 2 (using compound assignment for subtraction)
+        System.out.println("Result after subtraction: " + result);
+
+        result *= 2; // result is now 4 (using compound assignment for multiplication)
+        System.out.println("Result after multiplication: " + result);
+
+        result /= 2; // result is now 2 (using compound assignment for division)
+        System.out.println("Result after division: " + result);
+
+        result += 8; // result is now 10 (using compound assignment for addition)
+        result %= 7; // result is now 3 (using compound assignment for modulo)
+        System.out.println("Final result: " + result);
+    }
+}
