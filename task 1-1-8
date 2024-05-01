@@ -1,0 +1,23 @@
+public class CumulativeSumCalculator {
+    public static void main(String[] args) {
+        // Example usage
+        int sum1 = calculateCumulativeSum(4, 5, 10);
+        System.out.println("Total sum: " + sum1);
+
+        int sum2 = calculateCumulativeSum(1, 2, 3, 4, 5);
+        System.out.println("Total sum: " + sum2);
+    }
+
+    public static int calculateCumulativeSum(int... numbers) {
+        int totalSum = 0;
+        int cumulativeSum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            cumulativeSum += numbers[i];
+            totalSum += cumulativeSum;
+            System.out.println("Cumulative sum for parameter " + (i + 1) + ": " + cumulativeSum);
+        }
+
+        return totalSum;
+    }
+}
