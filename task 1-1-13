@@ -1,0 +1,28 @@
+public class FileReaderApp {
+    public static void main(String[] args) {
+        String fileName = "sample.txt"; // Replace with your actual file name
+
+        try {
+            // Create a FileReader
+            FileReader fileReader = new FileReader(fileName);
+
+            // Read data from the file (you can modify this part as needed)
+            char[] buffer = new char[1024];
+            int bytesRead = fileReader.read(buffer);
+
+            if (bytesRead != -1) {
+                String fileContent = new String(buffer, 0, bytesRead);
+                System.out.println("Data in the file:\n" + fileContent);
+            } else {
+                System.out.println("The file is empty.");
+            }
+
+            // Close the FileReader
+            fileReader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Error: File not found. Please make sure the file exists and try again.");
+        } catch (IOException e) {
+            System.err.println("Error reading the file. Details: " + e.getMessage());
+        }
+    }
+}
