@@ -1,0 +1,18 @@
+public class PalindromeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        if (isPalindrome(inputString)) {
+            System.out.println("The input string is a palindrome.");
+        } else {
+            System.out.println("The input string is not a palindrome.");
+        }
+    }
+
+    public static boolean isPalindrome(String str) {
+        StringBuilder reversed = new StringBuilder(str).reverse();
+        return str.equals(reversed.toString());
+    }
+}
